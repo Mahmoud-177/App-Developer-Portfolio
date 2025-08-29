@@ -1,0 +1,139 @@
+.contact .title{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+.contact-text{
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-color) 0px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 50px;
+    margin-top: 40px;
+}
+.contact-text .icon i{
+    background-color: var(--accent);
+    color: var(--bg-secondary);
+    padding: 15px;
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+.contact-text .contact-info{
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.contact-info{
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+}
+.contact-info:hover{
+    box-shadow: var(--shadow-color) 0px 16px 64px 0px;
+}
+.contact-info .info p{
+    margin: 0;
+}
+.contact-text .title{
+    text-align: start;
+    color: var(--text-selected);
+    font-weight: 700;
+}
+.left{
+    width: 40%;
+}
+.right{
+    width: 50%;
+}
+.left , .right{
+    margin-top: 50px;
+}
+.contact-form input{
+    border: none;
+    border-bottom: 2px solid var(--text-selected);
+}
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.half{
+    display: inline-block;
+    width: 49%;
+}
+#subject,#budget{
+    width: 100%;
+    display: inline-block;
+}
+.form-field input {
+    width: 100%;
+    padding: 12px 4px 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid var(--text-selected);
+    background: transparent;
+    color: var(--text-selected);
+}
+.form-field input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--accent);
+}
+.form-field label {
+    position: absolute;
+    left: 4px;
+    top: 12px;
+    color: #757575;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+.form-field input:focus + label,
+.form-field input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: var(--accent);
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-link i{
+    display: inline-block; /* مهم */
+    width: 60px;           /* اختار المقاس المناسب حسب الصورة */
+    height: 70px;
+    
+    background-image: url(../imgs/icon-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 60px; /* علشان يظبط النص جوه */
+    padding: 0; /* الأفضل هنا تشيله وتتحكم بالـ width/height */
+}
+.social-link i:hover{
+        background-image: url(../imgs/icon-bg-hover.svg);
+        color: var(--accent) !important;
+}
+.social-link p:hover{
+    color: var(--accent);
+}
+button[type="submit"] i{
+    animation: right-left 2s linear infinite;
+}
+@keyframes right-left{
+    50%{ transform: translateX(5px);}
+    100%{ transform: translateX(0);}
+}
