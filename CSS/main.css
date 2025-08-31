@@ -264,7 +264,7 @@ footer .social-links{
     height: 50px;
     text-align: center;
     background-color: var(--accent);
-    color: var(--text-color);
+    color: #fff;
     position: fixed;
     bottom: -1000px;
     left: 50px;
