@@ -64,3 +64,20 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme','dark')
     }
 })
+
+// اختار كل العناصر اللي ليها أي class من دول
+const elements = document.querySelectorAll('.zoom, .fade-in, .fade-in-left, .fade-in-right');
+
+// اعمل الـ Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view'); // يضيف الكلاس لما يبان
+        }
+    });
+}, {
+    threshold: 0.1 // يعني يظهر 10% من العنصر عالأقل
+});
+
+// اربط الـ Observer بكل عنصر
+elements.forEach((el) => observer.observe(el));

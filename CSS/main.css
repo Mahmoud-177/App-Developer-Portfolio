@@ -10,6 +10,8 @@
     --main-text: #002265;
     --card-bg: #f5fcff;
     --shadow-color: rgba(0, 0, 0, 0.3);
+    --circle-one: rgba(0, 136, 255, 0.15);
+    --circle-two: rgba(96, 138, 245, 0.2);
 }
 .dark-theme{
     --bg-color: #121212;
@@ -23,28 +25,11 @@
     --main-text: #BBDEFB;
     --card-bg: #222222;
     --shadow-color: rgba(100, 100, 255, 0.15);
+    --circle-one: rgba(58, 78, 122, 0.3);
+    --circle-two: rgba(180, 130, 255, 0.25);
 }
 body{
     position: relative;
-}
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background:
-        radial-gradient(circle, rgba(173, 216, 255, 0.25) 0%, transparent 70%) 10% 15% / 100px 100px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.3) 0%, transparent 70%) 20% 70% / 180px 180px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.2) 0%, transparent 70%) 35% 50% / 140px 140px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.3) 0%, transparent 70%) 50% 30% / 160px 160px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.25) 0%, transparent 70%) 65% 60% / 120px 120px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.35) 0%, transparent 70%) 80% 20% / 200px 200px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.2) 0%, transparent 70%) 90% 75% / 130px 130px,
-        radial-gradient(circle, rgba(173, 216, 255, 0.3) 0%, transparent 70%) 75% 85% / 160px 160px;
-    background-repeat: no-repeat;
 }
 .theme-toggle{
     background: none;
@@ -298,6 +283,18 @@ footer .social-links{
     animation: top-down 1.5s linear infinite;
     bottom: 50px;
 }
+.khaled{
+    display: inline-block;
+    animation: top-down infinite 2s linear;
+    margin: 10px 0;
+}
+
+@keyframes lil-top-down{
+    0%{ transform: translateY(0);}
+    25%{ transform: translateY(0.5px);}
+    75%{ transform: translateY(-0.5px);}
+    100%{ transform: translateY(0);}
+}
 @keyframes top-down{
     0%{ transform: translateY(0);}
     25%{ transform: translateY(10px);}
@@ -309,7 +306,7 @@ footer .social-links{
     overflow: hidden;
     width: 55ch;
     border-right: 3px solid var(--main-text);
-    animation: typer 3.5s steps(68) infinite, blink-caret 0.75s step-end infinite;
+    animation: typer 3.5s 5s steps(68) infinite, blink-caret 0.75s step-end infinite;
     display: inline-block;
 }
 .typing::after {
@@ -329,4 +326,194 @@ footer .social-links{
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--primary) }
+}
+section{
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--circle-one);
+    bottom: -50px;
+    left: -50px;
+    border-radius: 50%;
+}
+/* الدايرة التانية */
+.hero::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--circle-two);
+    top: -100px;
+    right: -100px;
+}
+.about::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--circle-one);
+    bottom: 10px;
+    left: 250px;
+    border-radius: 50%;
+    z-index: -1;
+}
+/* الدايرة التانية */
+.about::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--circle-two);
+    top: 10px;
+    right: 200px;
+    z-index: -1;
+}
+.skills::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--circle-one);
+    bottom: 10px;
+    left: 250px;
+    border-radius: 50%;
+    z-index: -1;
+}
+/* الدايرة التانية */
+.projects::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: var(--circle-two);
+    top: 60%;
+    right: 220px;
+    z-index: -1;
+}
+.projects::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: var(--circle-one);
+    bottom: 50%;
+    left: 50px;
+    border-radius: 50%;
+    z-index: -1;
+}
+/* الدايرة التانية */
+.skills::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--circle-two);
+    top: 10px;
+    right: 200px;
+    z-index: -1;
+}
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: var(--circle-two);
+    bottom: 50px;
+    left: 250px;
+    border-radius: 50%;
+    z-index: -1;
+}
+/* الدايرة التانية */
+.contact::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: var(--circle-two);
+    top: 100px;
+    right: 230px;
+    z-index: -1;
+}
+.zoom{
+    transform: scale(0);
+    opacity: 0;
+}
+.zoom.in-view{
+    animation: zoomAnimation ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+.fade-in{
+    opacity: 0;
+}
+.fade-in.in-view{
+    animation: fadeInAnimation ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+.fade-in-left{
+    opacity: 0;
+}
+.fade-in-left.in-view{
+    animation: fadeInLeft ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+.fade-in-right{
+    opacity: 0;
+}
+.fade-in-right.in-view{
+    animation: fadeInRight ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+@keyframes zoomAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
