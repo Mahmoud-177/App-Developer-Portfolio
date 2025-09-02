@@ -1,14 +1,18 @@
 .project-cards{
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .project-card{
     background-color: var(--bg-secondary);
-    border-radius: 8px;
-}
-.project-card{
+    border-radius: 16px;
     width: 30%;
+    padding: 20px;
+    overflow: hidden;
+}
+.project-card img{
+    border-radius: 16px;
 }
 .projects .title{
     text-align: center;
