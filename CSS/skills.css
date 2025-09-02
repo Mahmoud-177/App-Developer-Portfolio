@@ -76,8 +76,14 @@
     transform: rotateY(180deg);
 }
 .skill-bar{
-    height: 5px;
+    height: 10px;
     border-radius: 20px;
     background-color: var(--accent);
+}
+.skill-bar-cont{
     margin-bottom: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: #3332224f;
+    height: 10px;
 }
