@@ -3,6 +3,9 @@
     font-weight: 400;
     font-size: 1.7rem;
 }
+.error{
+    color: #ea6258;
+}
 .contact-text{
     background-color: var(--bg-secondary);
     box-shadow: var(--shadow-color) 0px 0px 20px 0px;

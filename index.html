@@ -152,41 +152,56 @@
                 My Expertise
                 </h3>
                 <div class="cards-grid flex-box fade-in">
-                <div class="card">
-                    <div class="card-front">
-                    <div class="icon"><img src="imgs/flutter-logo.svg" alt="" /></div>
-                    <div class="skill-title">Flutter & Dart</div>
-                    <div class="skill-describe">
-                        Building beautiful mobile apps with modern UI, animation, and
-                        clean architecture.
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="icon"><img src="imgs/flutter-logo.svg" alt="" /></div>
+                            <div class="skill-title">Flutter & Dart</div>
+                            <div>
+                                <div class="skill-bar" data-progress="90" style="width:0%"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="skill-describe">
+                                Building beautiful mobile apps with modern UI, animation, and
+                                clean architecture.
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="icon"><img src="imgs/figma-logo.svg" alt="" /></div>
+                            <div class="skill-title">UI/UX Implementation</div>
+                            <div>
+                                <div class="skill-bar" data-progress="85" style="width:0%"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="skill-describe">
+                                Creating pixel-perfect designs from Figma, fully functional on
+                                both Android & iOS.
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-back"></div>
-                </div>
 
-                <div class="card">
-                    <div class="card-front">
-                    <div class="icon"><img src="imgs/figma-logo.svg" alt="" /></div>
-                    <div class="skill-title">UI/UX Implementation</div>
-                    <div class="skill-describe">
-                        Creating pixel-perfect designs from Figma, fully functional on
-                        both Android & iOS.
+                    <div class="card">
+                        <div class="card-front">
+                            <div class="icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="skill-title">Clean Code</div>
+                            <div>
+                                <div class="skill-bar" data-progress="60" style="width:0%"></div>
+                            </div>
+                            <p>0%</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="skill-describe">
+                                Structuring apps using MVVM and BLoC for clean architecture, API
+                                handling, and scalable state management.
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    <div class="card-back"></div>
-                </div>
-
-                <div class="card">
-                    <div class="card-front">
-                    <div class="icon"><i class="fa-solid fa-code"></i></div>
-                    <div class="skill-title">Clean Code</div>
-                    <div class="skill-describe">
-                        Structuring apps using MVVM and BLoC for clean architecture, API
-                        handling, and scalable state management.
-                    </div>
-                    </div>
-                    <div class="card-back"></div>
-                </div>
                 </div>
             </div>
         </section>
@@ -197,9 +212,11 @@
                 <div class="project-cards fade-in">
                 <div class="project-card">
                     <img class="project-img" src="imgs/ecommerce-app-img.png" alt="">
-                    <h3 class="project-title">E-commerece Application</h3>
-                    <p>Products, cart and checkout — seamless shopping.</p>
-                    <a class="btn" data-num="1"><span>More Details...</span></a>
+                    <div>
+                        <h3 class="project-title">E-commerece Application</h3>
+                        <p>Products, cart and checkout — seamless shopping.</p>
+                        <a class="btn" data-num="1"><span>More Details...</span></a>
+                    </div>
                 </div>
                 <div class="project-card">
                     <img class="project-img" src="imgs/ecommerce-app-img.png" alt="">
@@ -282,92 +299,70 @@
                     There are many variations of passages of Lorem Ipsu available, but
                     the majority have suffered alte.
                     </p>
-                    <form action="#" method="post" class="contact-form">
-                    <div class="form-field">
-                        <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder=" "
-                        required
-                        />
-                        <label for="name">Name*</label>
-                    </div>
+                    <form id="contactForm" action="https://formspree.io/f/manddjpn" method="POST" class="contact-form" novalidate>
+                        <div class="form-field">
+                            <input type="text" name="name" id="name" placeholder=" " />
+                            <label for="name">Name*</label>
+                            <small class="error"></small>
+                        </div>
 
-                    <div class="form-field">
-                        <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder=" "
-                        required
-                        />
-                        <label for="email">Email*</label>
-                    </div>
+                        <div class="form-field">
+                            <input type="email" name="email" id="email" placeholder=" " />
+                            <label for="email">Email*</label>
+                            <small class="error"></small>
+                        </div>
 
-                    <div class="form-field">
-                        <input type="text" name="phone" placeholder=" " id="phone" />
-                        <label for="phone">Phone</label>
-                    </div>
+                        <div class="form-field">
+                            <input type="text" name="phone" placeholder=" " id="phone" />
+                            <label for="phone">Phone</label>
+                            <small class="error"></small>
+                        </div>
 
-                    <div class="form-field half">
-                        <input
-                        type="text"
-                        name="budget"
-                        id="budget"
-                        placeholder=" "
-                        required
-                        />
-                        <label for="budget">Budget*</label>
-                    </div>
+                        <div class="form-field half">
+                            <input type="text" name="budget" id="budget" placeholder=" " />
+                            <label for="budget">Budget*</label>
+                            <small class="error"></small>
+                        </div>
 
-                    <div class="form-field half">
-                        <input
-                        type="text"
-                        name="subject"
-                        id="subject"
-                        placeholder=" "
-                        required
-                        />
-                        <label for="subject">Subject*</label>
-                    </div>
+                        <div class="form-field half">
+                            <input type="text" name="subject" id="subject" placeholder=" " />
+                            <label for="subject">Subject*</label>
+                            <small class="error"></small>
+                        </div>
 
-                    <div class="form-field">
-                        <input
-                        type="text"
-                        name="message"
-                        id="message"
-                        placeholder=" "
-                        required
-                        />
-                        <label for="message">Message*</label>
-                    </div>
+                        <div class="form-field">
+                            <input type="text" name="message" id="message" placeholder=" " />
+                            <label for="message">Message*</label>
+                            <small class="error"></small>
+                        </div>
 
-                    <div style="display: flex; gap: 10px; align-items: center">
-                        <button
-                        style="
-                            cursor: pointer;
-                            border: none;
-                            font-size: 1rem;
-                            height: 45px;
-                            display: flex;
-                            align-items: center;
-                            gap: 6px;
-                        "
-                        class="btn"
-                        type="submit"
-                        >
-                        <span>Submit <i class="bx bx-send"></i></span>
-                        </button>
+                        <div id="formMessage" style="margin: 10px 0; font-size: 0.9rem;"></div>
 
-                        <a href="https://buymeacoffee.com/khaledmansb" target="_blank">
-                        <img
-                            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                            alt="Buy Me A Coffee"
-                            style="height: 45px; border-radius: 8px; margin-top: 26px"
-                        />
-                        </a>
-                    </div>
+                        <div style="display: flex; gap: 10px; align-items: center">
+                            <button
+                            style="
+                                cursor: pointer;
+                                border: none;
+                                font-size: 1rem;
+                                height: 45px;
+                                display: flex;
+                                align-items: center;
+                                gap: 6px;
+                            "
+                            class="btn"
+                            type="submit"
+                            >
+                            <span>Submit <i class="bx bx-send"></i></span>
+                            </button>
+
+                            <a href="https://buymeacoffee.com/khaledmansb" target="_blank">
+                            <img
+                                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                                alt="Buy Me A Coffee"
+                                style="height: 45px; border-radius: 8px; margin-top: 26px"
+                            />
+                            </a>
+                        </div>
                     </form>
                 </div>
                 </div>
@@ -404,5 +399,6 @@
         <script src="JS/main.js"></script>
         <script src="JS/skills.js"></script>
         <script src="JS/projects.js"></script>
+        <script src="JS/contact-form.js"></script>
     </body>
 </html>
