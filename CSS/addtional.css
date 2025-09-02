@@ -10,7 +10,7 @@ header .logo span::before{
     top: 0;
     left: 0;
     background-color: var(--main-text);
-    animation: left-right 2s linear infinite alternate;
+    animation: left-right 4s linear infinite alternate;
     transition: 0.3s;
 }
 @keyframes left-right{

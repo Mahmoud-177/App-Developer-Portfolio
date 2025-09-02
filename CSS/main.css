@@ -304,9 +304,9 @@ footer .social-links{
 .typing {
     white-space: nowrap;
     overflow: hidden;
-    width: 55ch;
+    width: 18ch;
     border-right: 3px solid var(--main-text);
-    animation: typer 3.5s 5s steps(68) infinite, blink-caret 0.75s step-end infinite;
+    animation: typer 2s 0.5s steps(20) infinite, blink-caret 0.75s step-end infinite;
     display: inline-block;
 }
 .typing::after {
@@ -321,7 +321,7 @@ footer .social-links{
 }
 @keyframes typer {
     from { width: 0; }
-    to { width: 55ch; } /* عدد الحروف */
+    to { width: 18ch; } /* عدد الحروف */
 }
 @keyframes blink-caret {
     from, to { border-color: transparent }
@@ -331,21 +331,31 @@ section{
     position: relative;
     overflow: hidden;
 }
-.hero::before {
+.hero::before,
+.hero::after,
+.about::after,
+.about::before,
+.contact::after,
+.contact::before,
+.projects::after,
+.projects::before,
+.skills::after,
+.skills::before{
     content: "";
     position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    z-index: -1;
+}
+.hero::before {
     width: 200px;
     height: 200px;
     background: var(--circle-one);
-    bottom: -50px;
-    left: -50px;
-    border-radius: 50%;
+    bottom: 0px;
+    left: 0px;
 }
 /* الدايرة التانية */
 .hero::after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
     width: 300px;
     height: 300px;
     background: var(--circle-two);
@@ -353,96 +363,64 @@ section{
     right: -100px;
 }
 .about::before {
-    content: "";
-    position: absolute;
     width: 200px;
     height: 200px;
     background: var(--circle-one);
     bottom: 10px;
     left: 250px;
-    border-radius: 50%;
-    z-index: -1;
 }
 /* الدايرة التانية */
 .about::after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
     width: 300px;
     height: 300px;
     background: var(--circle-two);
     top: 10px;
     right: 200px;
-    z-index: -1;
 }
 .skills::before {
-    content: "";
-    position: absolute;
     width: 100px;
     height: 100px;
     background: var(--circle-one);
     bottom: 10px;
     left: 250px;
-    border-radius: 50%;
-    z-index: -1;
 }
 /* الدايرة التانية */
 .projects::after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
     width: 170px;
     height: 170px;
     background: var(--circle-two);
     top: 60%;
     right: 220px;
-    z-index: -1;
 }
 .projects::before {
-    content: "";
-    position: absolute;
     width: 70px;
     height: 70px;
     background: var(--circle-one);
     bottom: 50%;
     left: 50px;
-    border-radius: 50%;
-    z-index: -1;
 }
 /* الدايرة التانية */
 .skills::after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
     width: 200px;
     height: 200px;
     background: var(--circle-two);
     top: 10px;
     right: 200px;
-    z-index: -1;
 }
 .contact::before {
-    content: "";
-    position: absolute;
     width: 120px;
     height: 120px;
     background: var(--circle-two);
     bottom: 50px;
     left: 250px;
-    border-radius: 50%;
-    z-index: -1;
 }
 /* الدايرة التانية */
 .contact::after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
     width: 160px;
     height: 160px;
     background: var(--circle-two);
     top: 100px;
     right: 230px;
-    z-index: -1;
 }
 .zoom{
     transform: scale(0);
