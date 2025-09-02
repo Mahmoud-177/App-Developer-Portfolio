@@ -31,6 +31,15 @@
         <meta name="twitter:card" content="summary_large_image" />
     </head>
     <body>
+        <div class="projects-details">
+            <div class="project-details">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sapiente fuga necessitatibus maxime, velit vel fugiat reiciendis rem facilis quas minima iste! At quam reprehenderit perferendis similique commodi voluptates dolorem?</p>
+            </div>
+            <div class="project-details">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sapiente fuga necessitatibus maxime, velit vel fugiat reiciendis rem facilis quas minima iste! At quam reprehenderit perferendis similique commodi voluptates dolorem?</p>
+            </div>
+        </div>
+        <div class="overlay"></div>
         <header>
             <nav class="nav-bar">
                 <div class="logo"><span>Khaled Mansour</span></div>
@@ -190,14 +199,15 @@
                     <img class="project-img" src="imgs/ecommerce-app-img.png" alt="">
                     <h3 class="project-title">E-commerece Application</h3>
                     <p>Products, cart and checkout — seamless shopping.</p>
-                    <a class="btn project-dtails"><span>More Details...</span></a>
+                    <a class="btn" data-num="1"><span>More Details...</span></a>
                 </div>
-                
                 <div class="project-card">
                     <img class="project-img" src="imgs/ecommerce-app-img.png" alt="">
-                    <h3 class="project-title">E-commerece Application</h3>
-                    <p>Products, cart and checkout — seamless shopping.</p>
-                    <a class="btn project-dtails"><span>More Details...</span></a>
+                    <div>
+                        <h3 class="project-title">E-commerece Application</h3>
+                        <p>Products, cart and checkout — seamless shopping.</p>
+                        <a class="btn" data-num="2"><span>More Details...</span></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -393,5 +403,6 @@
 
         <script src="JS/main.js"></script>
         <script src="JS/skills.js"></script>
+        <script src="JS/projects.js"></script>
     </body>
 </html>
