@@ -10,15 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => card.classList.toggle('flipped'));
     });
 
-    // animate a card's bars (smooth باستخدام requestAnimationFrame)
+    // easing function
+    function easeOutQuad(t) {
+        return t * (2 - t);
+    }
+
+    // animate a card's bars
     function animateCard(card) {
-        if (card.dataset.animated === 'true') return; // لو اتعملت قبل كده
+        if (card.dataset.animated === 'true') return; 
         const bars = card.querySelectorAll('.skill-bar');
 
         bars.forEach(bar => {
             const target = parseInt(bar.dataset.progress, 10) || 0;
             const percentElem = bar.closest('.card-front')?.querySelector('p') || card.querySelector('p');
-            const duration = 1200; // مدة الأنيميشن بالملي ثانية
+            const duration = 1500; // مدة أطول شوية علشان يبان التدريج
             const startTime = performance.now();
 
             // ابدأ من 0
@@ -27,11 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function step(now) {
                 const elapsed = now - startTime;
-                const t = Math.min(elapsed / duration, 1); // من 0 لـ 1
+                let t = Math.min(elapsed / duration, 1);
+                t = easeOutQuad(t); 
                 const value = Math.round(t * target);
                 bar.style.width = value + '%';
                 if (percentElem) percentElem.textContent = value + '%';
-                if (t < 1) requestAnimationFrame(step);
+
+                if (t < 1) {
+                    requestAnimationFrame(step);
+                }
             }
 
             requestAnimationFrame(step);
@@ -45,11 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCard(entry.target);
-                obs.unobserve(entry.target); // لو عايز يعيدها كل مرة شيل السطر ده
+                // obs.unobserve(entry.target); // لو عايز يعيدها كل مرة شيل الكومنت
             }
         });
     }, { threshold: 0.4 });
 
-    // راقب كل كارت
     cards.forEach(card => observer.observe(card));
 });

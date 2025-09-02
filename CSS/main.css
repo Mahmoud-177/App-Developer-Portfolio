@@ -305,19 +305,8 @@ footer .social-links{
     white-space: nowrap;
     overflow: hidden;
     width: 18ch;
-    border-right: 3px solid var(--main-text);
-    animation: typer 2s 0.5s steps(20) infinite, blink-caret 0.75s step-end infinite;
+    animation: typer 2s 0.5s steps(20);
     display: inline-block;
-}
-.typing::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -5px;
-    width: 2px;
-    height: 100%;
-    background-color: var(--accent);
-    animation: blink 0.7s step-end infinite;
 }
 @keyframes typer {
     from { width: 0; }
