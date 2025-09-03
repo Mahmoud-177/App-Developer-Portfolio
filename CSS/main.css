@@ -301,12 +301,23 @@ footer .social-links{
     75%{ transform: translateY(-10px);}
     100%{ transform: translateY(0);}
 }
+.typing-sec {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0ch;
+    animation: typerSec 2s 2s steps(18) forwards;
+    display: inline-block;
+}
 .typing {
     white-space: nowrap;
     overflow: hidden;
     width: 18ch;
-    animation: typer 2s 0.5s steps(20);
+    animation: typer 1.5s 0.5s steps(20);
     display: inline-block;
+}
+@keyframes typerSec {
+    from { width: 0; }
+    to { width: 16ch; } /* عدد الحروف */
 }
 @keyframes typer {
     from { width: 0; }
