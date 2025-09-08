@@ -132,7 +132,7 @@ section {
 header{
     background-color: var(--bg-secondary);
     position: fixed;
-    top: 0;
+    top: 5px;
     z-index: 1000;
     width: 100%;
     box-shadow: var(--shadow-color) 0 0 18px;
@@ -494,4 +494,75 @@ section{
         opacity: 1;
         transform: translateX(0);
     }
+}
+.bounce-top{
+    opacity: 0;
+    transform: translateY(-45px);
+}
+.bounce-top.in-view{
+    animation: bounceTop 2s ease 0s 1 alternate forwards;
+}
+@keyframes bounceTop {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 0.25;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+.scroller-cont{
+    background-color: var(--bg-secondary);
+    width: 100%;
+    height: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 555554;
+}
+.scroller{
+    background: linear-gradient(to right ,var(--accent) 80%, var(--accent-two-hover));
+    width: 0;
+    height: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 555555;
+    border-radius: 5px;
 }

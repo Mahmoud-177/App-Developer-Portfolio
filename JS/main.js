@@ -66,7 +66,7 @@ themeToggle.addEventListener('click', () => {
 })
 
 // اختار كل العناصر اللي ليها أي class من دول
-const elements = document.querySelectorAll('.zoom, .fade-in, .fade-in-left, .fade-in-right');
+const elements = document.querySelectorAll('.zoom, .bounce-top, .fade-in, .fade-in-left, .fade-in-right');
 
 // اعمل الـ Observer
 const observer = new IntersectionObserver((entries) => {
@@ -81,3 +81,11 @@ const observer = new IntersectionObserver((entries) => {
 
 // اربط الـ Observer بكل عنصر
 elements.forEach((el) => observer.observe(el));
+
+const scroller = document.querySelector(".scroller")
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+window.addEventListener("scroll", () => {
+    let scrollTop = document.documentElement.scrollTop
+    scroller.style.width = `${(scrollTop / height) * 100}%`
+})
