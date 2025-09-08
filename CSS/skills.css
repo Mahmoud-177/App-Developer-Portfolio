@@ -78,6 +78,7 @@
 .skill-bar{
     height: 10px;
     border-radius: 20px;
+    transition: width 2.5s ease;
     background-color: var(--accent);
 }
 .skill-bar-cont{
