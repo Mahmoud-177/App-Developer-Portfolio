@@ -1,6 +1,9 @@
 .projects-details > div{
     width: 400px;
 }
+.dark-theme .projects-details > div.shown{
+    box-shadow: 0 0 64px 22px rgba(100, 100, 255, 0.8);
+}
 .projects-details > div.shown{
     position: fixed;
     top: 50%;
@@ -8,9 +11,11 @@
     transform: translate(50%, -50%);
     z-index: 10011;
     background-color: #fff;
+    color: #000;
     padding: 20px;
     height: 300px;
     border-radius: 16px;
+    box-shadow: 0 0 64px 22px rgba(0, 0, 0, 0.8);
     animation: forwards detailsAnimation 1s 0.2s;
 }
 .projects-details > div:not(.shown){
